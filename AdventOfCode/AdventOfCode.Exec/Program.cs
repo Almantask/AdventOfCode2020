@@ -1,5 +1,5 @@
-﻿using System;
-using AdventOfCode.D1;
+﻿using AdventOfCode.D1;
+using AdventOfCode.D2;
 
 namespace AdventOfCode.Exec
 {
@@ -8,6 +8,7 @@ namespace AdventOfCode.Exec
         static void Main(string[] args)
         {
             Day1.Solve();
+            Day2.Solve();
         }
     }
 }
