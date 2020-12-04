@@ -10,7 +10,7 @@ namespace AdventOfCode.D1
 
         public static void Solve()
         {
-            var numbers = File.ReadAllLines("D1/P1Input.txt")
+            var numbers = File.ReadAllLines("D1/Input.txt")
                 .Select(int.Parse)
                 .ToArray();
 
