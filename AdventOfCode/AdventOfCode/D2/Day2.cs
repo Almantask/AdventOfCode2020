@@ -35,6 +35,10 @@ namespace AdventOfCode.D2
                     Character = character;
                 }
 
+                /// <summary>
+                /// Character after first space (" ") must be between first and second numbers separated by a dash.
+                /// Password is the last word, separated by ": ".
+                /// </summary>
                 public static (PasswordPolicy passwordPolicy, string password) Parse(string passwordAndPolicy)
                 {
                     var passWordAndPolicy = passwordAndPolicy.Split(": ");
@@ -49,6 +53,10 @@ namespace AdventOfCode.D2
                     return (passwordPolicy, password);
                 }
 
+                /// <summary>
+                /// Character after first space (" ") must be between first and second numbers separated by a dash.
+                /// Password is the last word, separated by ": ".
+                /// </summary>
                 public static bool IsValid(string passwordAndPolicy)
                 {
                     var (policy, password) = Parse(passwordAndPolicy);
@@ -94,6 +102,11 @@ namespace AdventOfCode.D2
                     return (passwordPolicy, password);
                 }
 
+                /// <summary>
+                /// Character after first space (" ") must appear once in
+                /// Password which is the last word, separated by ": ".
+                /// It needs to appear exactly once at dash separated positions (2 positions).
+                /// </summary>
                 public static bool IsValid(string passwordAndPolicy)
                 {
                     var (policy, password) = Parse(passwordAndPolicy);
