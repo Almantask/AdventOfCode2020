@@ -7,7 +7,7 @@ namespace AdventOfCode.Tests
     public class Day2Tests
     {
         [Fact]
-        public void Day2Part1_Solve_Given2Of3Valid_Returns2()
+        public void Part1_Solve_Given2Of3Valid_Returns2()
         {
             const int expectedCount = 2;
             string[] passwordAndPolciies =
@@ -28,7 +28,7 @@ namespace AdventOfCode.Tests
         [InlineData("1-3 a: abcde", true)]
         [InlineData("1-3 b: cdefg", false)]
         [InlineData("2-9 c: ccccccccc", true)]
-        public void Day2_Part1_PasswordPolicy_IsValid_Returns_True_If_PasswordMatchesPolicy(string passwordAndPolicy, bool expectedIsValid)
+        public void Part1_PasswordPolicy_IsValid_Returns_True_If_PasswordMatchesPolicy(string passwordAndPolicy, bool expectedIsValid)
         {
             var isValid = Day2.Part1.PasswordPolicy.IsValid(passwordAndPolicy);
 
@@ -36,7 +36,7 @@ namespace AdventOfCode.Tests
         }
 
         [Fact]
-        public void Day2_Part1_PasswordPolicy_Parse_Returns_Expected()
+        public void Part1_PasswordPolicy_Parse_Returns_Expected()
         {
             const string policy = "2-9 c: ccccccccc";
             var expectedPolicy = new Day2.Part1.PasswordPolicy(2, 9, 'c');
@@ -49,7 +49,7 @@ namespace AdventOfCode.Tests
         }
 
         [Fact]
-        public void Day2Part2_Solve_Given2Of3Valid_Returns2()
+        public void Part2_Solve_Given2Of3Valid_Returns2()
         {
             const int expectedCount = 1;
             string[] passwordAndPolciies =
@@ -70,7 +70,7 @@ namespace AdventOfCode.Tests
         [InlineData("1-3 a: abcde", true)]
         [InlineData("1-3 b: cdefg", false)]
         [InlineData("2-9 c: ccccccccc", false)]
-        public void Day2_Part2_PasswordPolicy_IsValid_Returns_True_If_PasswordMatchesPolicy(string passwordAndPolicy, bool expectedIsValid)
+        public void Part2_PasswordPolicy_IsValid_Returns_True_If_PasswordMatchesPolicy(string passwordAndPolicy, bool expectedIsValid)
         {
             var isValid = Day2.Part2.PasswordPolicy.IsValid(passwordAndPolicy);
 
@@ -78,7 +78,7 @@ namespace AdventOfCode.Tests
         }
 
         [Fact]
-        public void Day2_Part2_PasswordPolicy_Parse_Returns_Expected()
+        public void Part2_PasswordPolicy_Parse_Returns_Expected()
         {
             const string policy = "2-9 c: ccccccccc";
             var expectedPolicy = new Day2.Part2.PasswordPolicy(2, 9, 'c');
