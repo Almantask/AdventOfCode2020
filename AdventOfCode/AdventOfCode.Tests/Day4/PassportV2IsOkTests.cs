@@ -44,13 +44,20 @@ namespace AdventOfCode.Tests.Day4
         }
 
         [Theory]
-        [InlineData("1cm", true)]
-        [InlineData("1in", true)]
         [InlineData("acm", false)]
         [InlineData("ain", false)]
-        [InlineData("1cmin", false)]
+        [InlineData("150cmin", false)]
         [InlineData("in", false)]
         [InlineData("cm", false)]
+        [InlineData("149cm", false)]
+        [InlineData("150cm", true)]
+        [InlineData("193cm", true)]
+        [InlineData("194cm", false)]
+        [InlineData("58in", false)]
+        [InlineData("59in", true)]
+        [InlineData("76in", true)]
+        [InlineData("77in", false)]
+        [InlineData("70.6in", true)]
         public void Height_Returns_Is_NumberFollowedBy_cm_or_in(string height, bool expectedIsValid)
         {
             bool isvalid = Height(height);
@@ -95,8 +102,10 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("123456789", true)]
         [InlineData("012345678", true)]
         [InlineData("-12345678", false)]
+        [InlineData("000000001", true)]
+        [InlineData("0123456789", false)]
         [InlineData("1", false)]
-        public void PassportId_Returns_Is_NineDigitNumber(string passport, bool expectedIsValid)
+        public void PassportId_Returns_Is_9DigitNumber(string passport, bool expectedIsValid)
         {
             bool isvalid = PassportId(passport);
 

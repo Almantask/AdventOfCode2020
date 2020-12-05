@@ -66,17 +66,15 @@ namespace AdventOfCode.D4
 
                 public static bool ExpirationYear(string year) => IsNumberInRange(year, 2020, 2030);
 
-                public static bool Height(string height)
+                public static bool Height(string heightString)
                 {
-                    var isCm = height.EndsWith("cm");
-                    var isIn = height.EndsWith("in");
+                    var isCm = heightString.EndsWith("cm");
+                    var isIn = heightString.EndsWith("in");
 
-                    if (!isCm && !isIn) return false;
+                    heightString = heightString.Replace(isCm?"cm":"in", "");
 
-                    height = isCm ? height.Replace("cm", "")
-                                  : height.Replace("in", "");
-                    
-                    return int.TryParse(height, out _);
+                    return isCm ? IsNumberInRange(heightString, 150, 193)
+                                : isIn && IsNumberInRange(heightString, 59, 76);
                 }
 
                 public static bool HairColor(string color)
@@ -93,13 +91,13 @@ namespace AdventOfCode.D4
 
                 public static bool PassportId(string id)
                 {
-                    var regex = new Regex("[0-9]{9}");
-                    return regex.IsMatch(id);
+                    return int.TryParse(id, out _) &&
+                           id.Length == 9;
                 }
 
                 private static bool IsNumberInRange(string input, int min, int max)
                 {
-                    var isNumber = int.TryParse(input, out var number);
+                    var isNumber = float.TryParse(input, out var number);
                     return isNumber && number >= min && number <= max;
                 }
             }
