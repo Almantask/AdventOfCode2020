@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using FluentAssertions;
 using Xunit;
-using static AdventOfCode.D4.Day4.PassportV2.IsOk;
+using static AdventOfCode.D4.PassportV2.IsOk;
 
 namespace AdventOfCode.Tests.Day4
 {
@@ -14,9 +14,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("2003", false)]
         public void BirthYear_Returns_Is_Between_1920_2002(string year, bool expectedIsValid)
         {
-            bool isvalid = BirthYear(year);
+            bool isValid = BirthYear(year);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -26,9 +26,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("2021", false)]
         public void IssueYear_Returns_Is_Between_2010_2020(string year, bool expectedIsValid)
         {
-            bool isvalid = IssueYear(year);
+            bool isValid = IssueYear(year);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -38,9 +38,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("2031", false)]
         public void ExpirationYear_Returns_Is_Between_2020_2030(string year, bool expectedIsValid)
         {
-            bool isvalid = ExpirationYear(year);
+            bool isValid = ExpirationYear(year);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -60,9 +60,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("70.6in", true)]
         public void Height_Returns_Is_NumberFollowedBy_cm_or_in(string height, bool expectedIsValid)
         {
-            bool isvalid = Height(height);
+            bool isValid = Height(height);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -75,9 +75,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("0000000", false)]
         public void HairColor_Returns_Is_Tag_FollowedBy_exactly6_numbers_or_a_through_f(string color, bool expectedIsValid)
         {
-            bool isvalid = HairColor(color);
+            bool isValid = HairColor(color);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -93,9 +93,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("bam", false)]
         public void EyeColor_Returns_Is_Either_amb_blu_brn_gry_grn_hzl_oth(string color, bool expectedIsValid)
         {
-            bool isvalid = EyeColor(color);
+            bool isValid = EyeColor(color);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         [Theory]
@@ -107,9 +107,9 @@ namespace AdventOfCode.Tests.Day4
         [InlineData("1", false)]
         public void PassportId_Returns_Is_9DigitNumber(string passport, bool expectedIsValid)
         {
-            bool isvalid = PassportId(passport);
+            bool isValid = PassportId(passport);
 
-            isvalid.Should().Be(expectedIsValid);
+            isValid.Should().Be(expectedIsValid);
         }
 
         private static string Input(string file)

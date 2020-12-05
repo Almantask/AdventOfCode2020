@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using AdventOfCode.D4;
 using FluentAssertions;
 using Xunit;
-using static AdventOfCode.D4.Day4.Passport.Keys;
+using static AdventOfCode.D4.Passport.Keys;
 
 namespace AdventOfCode.Tests.Day4
 {
@@ -15,7 +15,7 @@ namespace AdventOfCode.Tests.Day4
         {
             var mixedFullPassport = "ecl:gry pid:860033327 eyr:2020 hcl:#fffffd" + Environment.NewLine +
                                     "byr:1937 iyr:2017 cid:147 hgt:183cm";
-            var expectedMixedFullPassport = new D4.Day4.PassportV2(new Dictionary<string, string>
+            var expectedMixedFullPassport = new PassportV2(new Dictionary<string, string>
                 {
                     { EyeColor, "gry" },
                     { PassportId, "860033327" },
@@ -28,14 +28,14 @@ namespace AdventOfCode.Tests.Day4
                 }
             );
 
-            var actual = D4.Day4.PassportV2.Parse(mixedFullPassport);
+            var actual = PassportV2.Parse(mixedFullPassport);
 
             actual.Should().BeEquivalentTo(expectedMixedFullPassport);
         }
 
         [Theory]
         [MemberData(nameof(PassportV2IsValidExpectations))]
-        public void IsValid_Returns_True_When_AllMandatoryFieldsExist(D4.Day4.Passport passport, bool expectedIsValid)
+        public void IsValid_Returns_True_When_AllMandatoryFieldsExist(Passport passport, bool expectedIsValid)
         {
             var isValid = passport.IsValid();
 
@@ -55,7 +55,7 @@ namespace AdventOfCode.Tests.Day4
                 yield return Expect("Part2/Valid3", true);
                 yield return Expect("Part2/Valid4", true);
 
-                object[] Expect(string input, bool isValid) => new object[] { D4.Day4.PassportV2.Parse(Input(input)), isValid };
+                object[] Expect(string input, bool isValid) => new object[] { PassportV2.Parse(Input(input)), isValid };
             }
         }
 

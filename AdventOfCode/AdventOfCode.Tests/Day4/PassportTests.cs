@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using AdventOfCode.D4;
 using FluentAssertions;
 using Xunit;
-using static AdventOfCode.D4.Day4.Passport.Keys;
+using static AdventOfCode.D4.Passport.Keys;
 
 namespace AdventOfCode.Tests.Day4
 {
@@ -12,7 +12,7 @@ namespace AdventOfCode.Tests.Day4
     {
         [Theory]
         [MemberData(nameof(PassportIsValidExpectations))]
-        public void Passport_IsValid_Returns_True_When_AllMandatoryFieldsExist(D4.Day4.Passport passport, bool expectedIsValid)
+        public void Passport_IsValid_Returns_True_When_AllMandatoryFieldsExist(Passport passport, bool expectedIsValid)
         {
             var isValid = passport.IsValid();
 
@@ -21,9 +21,9 @@ namespace AdventOfCode.Tests.Day4
 
         [Theory]
         [MemberData(nameof(ExpectedParsedPasswords))]
-        public void Passport_Parse_Returns_Expected(string passportInfo, D4.Day4.Passport expectedPassport)
+        public void Passport_Parse_Returns_Expected(string passportInfo, Passport expectedPassport)
         {
-            var passport = D4.Day4.Passport.Parse(passportInfo);
+            var passport = Passport.Parse(passportInfo);
 
             passport.Should().BeEquivalentTo(expectedPassport);
         }
@@ -34,7 +34,7 @@ namespace AdventOfCode.Tests.Day4
             {
                 var mixedFullPassport = "ecl:gry pid:860033327 eyr:2020 hcl:#fffffd" + Environment.NewLine +
                                         "byr:1937 iyr:2017 cid:147 hgt:183cm";
-                var expectedMixedFullPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var expectedMixedFullPassport = new Passport(new Dictionary<string, string>
                     {
                         { EyeColor, "gry" },
                         { PassportId, "860033327" },
@@ -49,49 +49,49 @@ namespace AdventOfCode.Tests.Day4
                 yield return new object[] { mixedFullPassport, expectedMixedFullPassport };
 
                 var justiyr = "iyr:2013";
-                var justIyrPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justIyrPassport = new Passport(new Dictionary<string, string>
                 {
                     {IssueYear, "2013"}
                 });
                 yield return new object[] { justiyr, justIyrPassport };
 
                 var justEcl = "ecl:amb";
-                var justEclPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justEclPassport = new Passport(new Dictionary<string, string>
                 {
                     { EyeColor, "amb"}
                 });
                 yield return new object[] { justEcl, justEclPassport };
 
                 var justCid = "cid:350";
-                var justcidPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justcidPassport = new Passport(new Dictionary<string, string>
                 {
                     {CountryId, "350"}
                 });
                 yield return new object[] { justCid, justcidPassport };
 
                 var justEyr = "eyr:2023";
-                var justEyrPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justEyrPassport = new Passport(new Dictionary<string, string>
                 {
                     {ExpirationYear, "2023"}
                 });
                 yield return new object[] { justEyr, justEyrPassport };
 
                 var justPid = "pid:028048884";
-                var justPidPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justPidPassport = new Passport(new Dictionary<string, string>
                 {
                     {PassportId, "028048884"}
                 });
                 yield return new object[] { justPid, justPidPassport };
 
                 var justHcl = "hcl:#cfa07d";
-                var justHclPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justHclPassport = new Passport(new Dictionary<string, string>
                 {
                     {HairColor, "#cfa07d"}
                 });
                 yield return new object[] { justHcl, justHclPassport };
 
                 var justByr = "byr:1929";
-                var justByrPassport = new D4.Day4.Passport(new Dictionary<string, string>
+                var justByrPassport = new Passport(new Dictionary<string, string>
                 {
                     {BirthYear, "1929"}
                 });
@@ -108,7 +108,7 @@ namespace AdventOfCode.Tests.Day4
                 yield return Expect("Part1/OptionalInfoMissing", true);
                 yield return Expect("Part1/MissingCidAndByr", false);
 
-                object[] Expect(string input, bool isValid) => new object[] { D4.Day4.Passport.Parse(Input(input)), isValid };
+                object[] Expect(string input, bool isValid) => new object[] { Passport.Parse(Input(input)), isValid };
             }
         }
 
