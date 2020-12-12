@@ -75,7 +75,7 @@ namespace AdventOfCode.D5
             {
                 get
                 {
-                    var row = _partition[..8];
+                    var row = _partition[..MaxCols];
                     return Search(MaxRows, row, Direction.Back);
                 }
             }
@@ -84,7 +84,7 @@ namespace AdventOfCode.D5
             {
                 get
                 {
-                    var columns = _partition[7..];
+                    var columns = _partition[(MaxCols-1)..];
                     return Search(MaxCols, columns, Direction.Right);
                 }
             }
