@@ -1,7 +1,12 @@
-﻿using AdventOfCode.D1;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using AdventOfCode.D1;
 using AdventOfCode.D2;
 using AdventOfCode.D3;
 using AdventOfCode.D4;
+using AdventOfCode.D5;
 
 namespace AdventOfCode.Exec
 {
@@ -13,6 +18,7 @@ namespace AdventOfCode.Exec
             Day2.Solve();
             Day3.Solve();
             Day4.Solve();
+            Day5.Solve();
         }
     }
 }
