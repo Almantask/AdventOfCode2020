@@ -4,7 +4,7 @@ using FluentAssertions;
 using Xunit;
 using static AdventOfCode.D4.Day4;
 
-namespace AdventOfCode.Tests.Day4
+namespace AdventOfCode.Tests.D4
 {
     public class Part2Tests
     {

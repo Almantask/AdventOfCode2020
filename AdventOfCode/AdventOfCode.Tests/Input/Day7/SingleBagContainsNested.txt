@@ -1,0 +1,4 @@
+﻿dark orange bags contain 3 bright white bags, 4 muted yellow bags.
+bright white bags contain 1 shiny gold bag.
+muted yellow bags contain no other bags.
+shiny gold bags contain no other bags.
