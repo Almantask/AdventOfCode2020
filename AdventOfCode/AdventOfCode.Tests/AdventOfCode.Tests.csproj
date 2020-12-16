@@ -112,19 +112,31 @@
     <None Update="Input\Day6\TwoPeopleSameGroupA.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\ShinyBagCannotContain.txt">
+    <None Update="Input\Day7\P1\ShinyBagCannotContain.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\SingleBagContainsDirectly.txt">
+    <None Update="Input\Day7\P1\SingleBagContainsDirectly.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\SingleBagContainsNestedAndDirect.txt">
+    <None Update="Input\Day7\P1\SingleBagContainsNestedAndDirect.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\SingleBagContainsNested.txt">
+    <None Update="Input\Day7\P1\SingleBagContainsNested.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\SingleBagContainsOthersWhichCantContain.txt">
+    <None Update="Input\Day7\P1\SingleBagContainsOthersWhichCantContain.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\Day7\P2\3And2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\Day7\P2\Only3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\Day7\P2\Empty.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\Day7\P2\NestedBags.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

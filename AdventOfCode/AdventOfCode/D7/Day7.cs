@@ -21,11 +21,17 @@ namespace AdventOfCode.D7
         public static class Part2
         {
             /// <summary>
-            /// 
+            /// How many bags can fit max inside 1 shiny bag?
             /// </summary>
             public static int Solve(string bagRules)
             {
-                return 0;
+                var rules = bagRules
+                    .Split(Environment.NewLine)
+                    .Select(br => BagRules.Parse(br));
+
+                var bags = new Bags(rules);
+
+                return bags.SumShinyGold();
             }
         }
 

@@ -1,0 +1,3 @@
+﻿shiny gold bags contain 3 muted yellow bags, 2 dotted black bags.
+muted yellow bags contain no other bags.
+dotted black bags contain no other bags.

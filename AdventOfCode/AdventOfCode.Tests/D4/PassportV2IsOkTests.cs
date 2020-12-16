@@ -3,7 +3,7 @@ using FluentAssertions;
 using Xunit;
 using static AdventOfCode.D4.PassportV2.IsOk;
 
-namespace AdventOfCode.Tests.Day4
+namespace AdventOfCode.Tests.D4
 {
     public class PassportV2IsValidTests
     {

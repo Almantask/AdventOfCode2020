@@ -9,7 +9,25 @@ namespace AdventOfCode.D7
 
         public Bags(IEnumerable<BagRules> rules)
         {
-            _rules = rules;
+            _rules = rules.ToList();
+        }
+
+        public int SumShinyGold()
+        {
+            var shiny = _rules.First(r => r.Name == Day7.ShinyGold);
+            return MaxBagsInside(shiny.CouldHold);
+        }
+
+        private int MaxBagsInside(Dictionary<string, int> bagRules)
+        {
+            if (!bagRules.Any()) return 0;
+            var bagsCountDirectly = bagRules.Values.Sum();
+
+            var belongingRules = _rules
+                .Where(r => bagRules.ContainsKey(r.Name))
+                .ToList();
+
+            return bagsCountDirectly + belongingRules.Sum(br => bagRules[br.Name] * MaxBagsInside(br.CouldHold));
         }
 
         public int CountShinyGold() => _rules.Count(r => ContainsGold(r, _rules));

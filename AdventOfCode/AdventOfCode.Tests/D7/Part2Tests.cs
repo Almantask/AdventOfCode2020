@@ -6,13 +6,13 @@ using Xunit;
 
 namespace AdventOfCode.Tests.D7
 {
-    public class Part1Tests
+    public class Part2Tests
     {
         [Theory]
         [MemberData(nameof(SolveExpectations))]
         public void Solve_Returns_ExpectedShinyGoldCount(string rules, int expectedShinyGoldCount)
         {
-            var goldCount = Day7.Part1.Solve(rules);
+            var goldCount = Day7.Part2.Solve(rules);
 
             goldCount.Should().Be(expectedShinyGoldCount);
         }
@@ -21,19 +21,17 @@ namespace AdventOfCode.Tests.D7
         {
             get
             {
-                yield return Expect("ShinyBagCannotContain", 0);
-                yield return Expect("SingleBagContainsDirectly", 1);
-                yield return Expect("SingleBagContainsNested", 2);
-                yield return Expect("SingleBagContainsOthersWhichCantContain", 0);
-                yield return Expect("SingleBagContainsNestedAndDirect", 2);
+                yield return Expect("Empty", 0);
+                yield return Expect("NestedBags", 9);
+                yield return Expect("Only3", 3);
+                yield return Expect("3And2", 5);
 
-
-                static object[] Expect(string file, int expectedShinyCount)
+                static object[] Expect(string file, int expectedShinySum)
                 {
                     return new object[]
                     {
-                        File.ReadAllText($"Input/Day7/P1/{file}.txt"),
-                        expectedShinyCount
+                        File.ReadAllText($"Input/Day7/P2/{file}.txt"),
+                        expectedShinySum
                     };
                 }
             }
