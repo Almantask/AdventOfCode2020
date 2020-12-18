@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdventOfCode.Helpers
+namespace AdventOfCode.Common
 {
     public static class StringExtensions
     {

@@ -30,7 +30,7 @@ namespace AdventOfCode.Tests.D7
                 {
                     return new object[]
                     {
-                        File.ReadAllText($"Input/Day7/P2/{file}.txt"),
+                        File.ReadAllText($"Input/D7/P2/{file}.txt"),
                         expectedShinySum
                     };
                 }

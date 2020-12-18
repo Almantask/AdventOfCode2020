@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode.D1
 {
-    public static class Day1
+    public class Day1
     {
         public const int NeededSum = 2020;
 

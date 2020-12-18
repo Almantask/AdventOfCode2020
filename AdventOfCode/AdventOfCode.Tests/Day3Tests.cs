@@ -74,8 +74,7 @@ namespace AdventOfCode.Tests
 
         private static string Input(string file)
         {
-            const string baseDir = "Input/Day3";
-            return File.ReadAllText($"{baseDir}/{file}.txt");
+            return File.ReadAllText($"Input/D3/{file}.txt");
         }
     }
 }

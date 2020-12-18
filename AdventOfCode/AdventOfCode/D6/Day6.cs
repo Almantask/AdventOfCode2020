@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
-using AdventOfCode.Helpers;
+using AdventOfCode.Common;
 
 namespace AdventOfCode.D6
 {

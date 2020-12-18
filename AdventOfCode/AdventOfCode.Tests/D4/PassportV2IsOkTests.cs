@@ -114,7 +114,7 @@ namespace AdventOfCode.Tests.D4
 
         private static string Input(string file)
         {
-            return File.ReadAllText($"Input/Day4/{file}.txt");
+            return File.ReadAllText($"Input/D4/{file}.txt");
         }
     }
 }

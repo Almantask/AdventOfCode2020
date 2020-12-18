@@ -2,7 +2,6 @@
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
-using AdventOfCode.Helpers;
 
 namespace AdventOfCode.D7
 {

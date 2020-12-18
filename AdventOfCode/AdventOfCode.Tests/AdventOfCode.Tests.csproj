@@ -31,114 +31,118 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Input\Day3\Default.txt">
+    <None Update="Input\D3\Default.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day3\OnlyTreesButTooSmall.txt">
+    <None Update="Input\D3\OnlyTreesButTooSmall.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day3\x6NoTreesDown.txt">
+    <None Update="Input\D3\x6NoTreesDown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day3\x7TreesDown.txt">
+    <None Update="Input\D3\x7TreesDown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day3\x6TreesDown.txt">
+    <None Update="Input\D3\x6TreesDown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\0Valid.txt">
+    <None Update="Input\D4\Part1\0Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\1Valid.txt">
+    <None Update="Input\D4\Part1\1Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\2Valid.txt">
+    <None Update="Input\D4\Part1\2Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\AllInfoPresent.txt">
+    <None Update="Input\D4\Part1\AllInfoPresent.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\MissingCidAndByr.txt">
+    <None Update="Input\D4\Part1\MissingCidAndByr.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\MissingHgt.txt">
+    <None Update="Input\D4\Part1\MissingHgt.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part1\OptionalInfoMissing.txt">
+    <None Update="Input\D4\Part1\OptionalInfoMissing.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\0Valid.txt">
+    <None Update="Input\D4\Part2\0Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\1Valid.txt">
+    <None Update="Input\D4\Part2\1Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\2Valid.txt">
+    <None Update="Input\D4\Part2\2Valid.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Valid1.txt">
+    <None Update="Input\D4\Part2\Valid1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Valid3.txt">
+    <None Update="Input\D4\Part2\Valid3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Invalid2.txt">
+    <None Update="Input\D4\Part2\Invalid2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Valid4.txt">
+    <None Update="Input\D4\Part2\Valid4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Invalid3.txt">
+    <None Update="Input\D4\Part2\Invalid3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Valid2.txt">
+    <None Update="Input\D4\Part2\Valid2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Invalid4.txt">
+    <None Update="Input\D4\Part2\Invalid4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day4\Part2\Invalid1.txt">
+    <None Update="Input\D4\Part2\Invalid1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day6\OnePersonA.txt">
+    <None Update="Input\D6\OnePersonA.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day6\ThreeGroupsMixed.txt">
+    <None Update="Input\D6\ThreeGroupsMixed.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day6\TwoGroupsA.txt">
+    <None Update="Input\D6\TwoGroupsA.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day6\TwoPeopleSameGroupA.txt">
+    <None Update="Input\D6\TwoPeopleSameGroupA.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P1\ShinyBagCannotContain.txt">
+    <None Update="Input\D7\P1\ShinyBagCannotContain.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P1\SingleBagContainsDirectly.txt">
+    <None Update="Input\D7\P1\SingleBagContainsDirectly.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P1\SingleBagContainsNestedAndDirect.txt">
+    <None Update="Input\D7\P1\SingleBagContainsNestedAndDirect.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P1\SingleBagContainsNested.txt">
+    <None Update="Input\D7\P1\SingleBagContainsNested.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P1\SingleBagContainsOthersWhichCantContain.txt">
+    <None Update="Input\D7\P1\SingleBagContainsOthersWhichCantContain.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P2\3And2.txt">
+    <None Update="Input\D7\P2\3And2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P2\Only3.txt">
+    <None Update="Input\D7\P2\Only3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P2\Empty.txt">
+    <None Update="Input\D7\P2\Empty.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Input\Day7\P2\NestedBags.txt">
+    <None Update="Input\D7\P2\NestedBags.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
 
 </Project>

@@ -100,6 +100,6 @@ namespace AdventOfCode.Tests
         }
 
         static object[] Expect(string file, int expectedCount)
-            => new object[] { File.ReadAllText($"Input/Day6/{file}.txt"), expectedCount };
+            => new object[] { File.ReadAllText($"Input/D6/{file}.txt"), expectedCount };
     }
 }
