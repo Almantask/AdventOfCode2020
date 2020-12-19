@@ -16,12 +16,7 @@ namespace AdventOfCode.D8
             /// </summary>
             public int Solve(string input)
             {
-                var instructions = input
-                    .Split(Environment.NewLine)
-                    .Select(i => Instruction.Parse(i))
-                    .ToArray();
-
-                var booter = new ConsoleBooter(instructions);
+                var booter = BuildConsoleBooter(input, out var instructions);
                 for(var i = 0; i < instructions.Length; i++)
                 {
                     if (instructions[i].Name == ConsoleBooter.Instructions.Increment) continue;
@@ -61,12 +56,7 @@ namespace AdventOfCode.D8
             /// </summary>
             public int Solve(string input)
             {
-                var instructions = input
-                    .Split(Environment.NewLine)
-                    .Select(i => Instruction.Parse(i))
-                    .ToArray();
-
-                var booter = new ConsoleBooter(instructions);
+                var booter = BuildConsoleBooter(input, out _);
                 while(!booter.CurrentInstruction.IsVisited)
                 {
                     booter.NextInstruction();
@@ -74,6 +64,16 @@ namespace AdventOfCode.D8
 
                 return booter.Accumulator;
             }
+        }
+
+        private static ConsoleBooter BuildConsoleBooter(string input, out Instruction[] instructions)
+        {
+            instructions = input
+                .Split(Environment.NewLine)
+                .Select(i => Instruction.Parse(i))
+                .ToArray();
+
+            return new ConsoleBooter(instructions);
         }
     }
 }
