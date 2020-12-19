@@ -1,4 +1,6 @@
-﻿using AdventOfCode.Common;
+﻿using System;
+using System.Linq;
+using AdventOfCode.Common;
 
 namespace AdventOfCode.D8
 {
@@ -6,30 +8,46 @@ namespace AdventOfCode.D8
     {
         protected override int Day => 8;
 
-        public static class Instructions
-        {
-            /// <summary>
-            /// Do nothing. Ignore number after
-            /// </summary>
-            public const string Ignore = "nop";
-            /// <summary>
-            /// Jump to next instruction indicated by a number next to 
-            /// </summary>
-            public const string Jump = "jmp";
-            /// <summary>
-            /// Add to global accumulator.
-            /// </summary>
-            public const string Increment = "";
-        }
-
         public class Part2 : ISolution
         {
             /// <summary>
-            /// 
+            /// Fix the loop and return the accumulator value after the program terminates.
+            /// Can only replace nop with jmp and jmp with nop.
             /// </summary>
             public int Solve(string input)
             {
-                return 0;
+                var instructions = input
+                    .Split(Environment.NewLine)
+                    .Select(i => Instruction.Parse(i))
+                    .ToArray();
+
+                var booter = new ConsoleBooter(instructions);
+                for(var i = 0; i < instructions.Length; i++)
+                {
+                    if (instructions[i].Name == ConsoleBooter.Instructions.Increment) continue;
+
+                    booter.SwapAt(i);
+                    if (IsLoop(booter))
+                    {
+                        booter.Reset();
+                    }
+                    else
+                    {
+                        return booter.Accumulator;
+                    }
+                }
+
+                return -1;
+            }
+
+            private static bool IsLoop(ConsoleBooter booter)
+            {
+                while (!booter.CurrentInstruction.IsVisited)
+                {
+                    booter.NextInstruction();
+                }
+
+                return !booter.IsTerminated;
             }
         }
 
@@ -39,11 +57,22 @@ namespace AdventOfCode.D8
         public class Part1 : ISolution
         {
             /// <summary>
-            /// Get first repeated instruction (loop start)
+            /// Get accumulator value at first repeated instruction (loop start)
             /// </summary>
             public int Solve(string input)
             {
-                return 0;
+                var instructions = input
+                    .Split(Environment.NewLine)
+                    .Select(i => Instruction.Parse(i))
+                    .ToArray();
+
+                var booter = new ConsoleBooter(instructions);
+                while(!booter.CurrentInstruction.IsVisited)
+                {
+                    booter.NextInstruction();
+                }
+
+                return booter.Accumulator;
             }
         }
     }
