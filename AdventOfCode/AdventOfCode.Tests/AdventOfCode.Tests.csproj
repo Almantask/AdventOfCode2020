@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Day1Tests.cs">
+    <Compile Update="D1\Day1Tests.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
@@ -190,6 +190,12 @@
     <None Update="Input\D9\P1\All1s.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Input\D10\P2\" />
+    <Folder Include="Input\D10\P1\" />
+    <Folder Include="D10\" />
   </ItemGroup>
 
 </Project>
