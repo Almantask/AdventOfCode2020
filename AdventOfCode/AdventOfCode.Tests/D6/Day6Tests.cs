@@ -6,7 +6,7 @@ using FluentAssertions;
 using Xunit;
 using static AdventOfCode.D6.Day6;
 
-namespace AdventOfCode.Tests
+namespace AdventOfCode.Tests.D6
 {
     public class Day6Tests
     {

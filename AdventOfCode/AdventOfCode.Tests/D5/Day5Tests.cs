@@ -5,7 +5,7 @@ using FluentAssertions;
 using Xunit;
 using static AdventOfCode.D5.Day5;
 
-namespace AdventOfCode.Tests
+namespace AdventOfCode.Tests.D5
 {
     public class Day5Tests
     {

@@ -3,7 +3,7 @@ using AdventOfCode.D1;
 using FluentAssertions;
 using Xunit;
 
-namespace AdventOfCode.Tests
+namespace AdventOfCode.Tests.D1
 {
     public class Day1Tests
     {
