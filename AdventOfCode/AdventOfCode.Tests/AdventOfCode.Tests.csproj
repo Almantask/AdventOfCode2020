@@ -195,7 +195,6 @@
   <ItemGroup>
     <Folder Include="Input\D10\P2\" />
     <Folder Include="Input\D10\P1\" />
-    <Folder Include="D10\" />
   </ItemGroup>
 
 </Project>
