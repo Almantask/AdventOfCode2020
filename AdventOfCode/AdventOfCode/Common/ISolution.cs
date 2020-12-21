@@ -6,6 +6,6 @@ namespace AdventOfCode.Common
 {
     public interface ISolution
     {
-        int Solve(string input);
+        long Solve(string input);
     }
 }

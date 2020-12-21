@@ -14,7 +14,7 @@ namespace AdventOfCode.D8
             /// Fix the loop and return the accumulator value after the program terminates.
             /// Can only replace nop with jmp and jmp with nop.
             /// </summary>
-            public int Solve(string input)
+            public long Solve(string input)
             {
                 var booter = BuildConsoleBooter(input, out var instructions);
                 for(var i = 0; i < instructions.Length; i++)
@@ -54,7 +54,7 @@ namespace AdventOfCode.D8
             /// <summary>
             /// Get accumulator value at first repeated instruction (loop start)
             /// </summary>
-            public int Solve(string input)
+            public long Solve(string input)
             {
                 var booter = BuildConsoleBooter(input, out _);
                 while(!booter.CurrentInstruction.IsVisited)
