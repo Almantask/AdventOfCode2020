@@ -1,4 +1,5 @@
 ﻿using AdventOfCode.D1;
+using AdventOfCode.D10;
 using AdventOfCode.D2;
 using AdventOfCode.D3;
 using AdventOfCode.D4;
@@ -23,6 +24,7 @@ namespace AdventOfCode.Exec
             Day7.Solve();
             new Day8().Solve();
             new Day9().Solve();
+            new Day10().Solve();
         }
     }
 }

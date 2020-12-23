@@ -31,6 +31,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Input\D10\P1\DefaultExample1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\D10\P1\DefaultExample2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Input\D3\Default.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -194,7 +200,6 @@
 
   <ItemGroup>
     <Folder Include="Input\D10\P2\" />
-    <Folder Include="Input\D10\P1\" />
   </ItemGroup>
 
 </Project>

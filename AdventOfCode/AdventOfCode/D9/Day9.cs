@@ -22,7 +22,7 @@ namespace AdventOfCode.D9
             /// </summary>
             public long Solve(string input)
             {
-                var numbers = input.ToNumbersSplitByLine();
+                var numbers = input.ToNumbersSplitByLineL();
                 return Solve(numbers);
             }
 
@@ -53,7 +53,7 @@ namespace AdventOfCode.D9
             /// </summary>
             public long Solve(string input)
             {
-                var numbers = input.ToNumbersSplitByLine();
+                var numbers = input.ToNumbersSplitByLineL();
                 var oddOne = new Part1(_preamble).Solve(numbers);
                 TryGetNumbersOfSum(oddOne, numbers, out var summedNumbers);
 

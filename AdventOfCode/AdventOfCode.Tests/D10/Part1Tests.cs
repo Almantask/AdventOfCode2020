@@ -1,19 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using AdventOfCode.D10;
+using FluentAssertions;
+using Xunit;
 
 namespace AdventOfCode.Tests.D10
 {
     public class Part1Tests
     {
-        public void Test()
+        [Theory]
+        [MemberData(nameof(SolveExpectations))]
+        public void Solve_Returns_SumOf_1jAnd2jDifferences(string input, long expectedSum)
         {
-            // wrong j.
-            // adapters for j +(1-3)
-            // your device = adapters.J.Max + 3
-            // Outlet- 0j
-            // count differences: 1j, 2j and 3j.
+            var solution = new Day10.Part1();
+
             // diff 1j * diff 3j
+            var sum = solution.Solve(input);
+
+            sum.Should().Be(expectedSum);
+        }
+
+        public static IEnumerable<object[]> SolveExpectations
+        {
+            get
+            {
+                yield return Expect("DefaultExample1", 35);
+                yield return Expect("DefaultExample2", 220);
+
+                object[] Expect(string file, long expectedSum)
+                {
+                    return new object[]
+                    {
+                        File.ReadAllText($"Input/D10/P1/{file}.txt"),
+                        expectedSum
+                    };
+                }
+            }
         }
     }
 }
